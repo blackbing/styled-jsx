@@ -189,3 +189,28 @@ export default (() => <div className={\\"jsx-2743241663\\"}>
     <_JSXStyle styleId={\\"2743241663\\"} css={\\"p.jsx-2743241663{color:red;}\\"} />
   </div>);"
 `;
+
+exports[`works with styled-jsx styles and babel-preset-env 1`] = `
+"\\"use strict\\";
+
+Object.defineProperty(exports, \\"__esModule\\", {
+  value: true
+});
+
+var _style = require(\\"styled-jsx/style\\");
+
+var _style2 = _interopRequireDefault(_style);
+
+var _style3 = require(\\"./style2\\");
+
+var _style4 = _interopRequireDefault(_style3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  return <div className=\\"hello\\">
+    <p>Hello World</p>
+    <_style2.default styleId={_style4.default.__hash} css={_style4.default} />
+  </div>;
+};"
+`;

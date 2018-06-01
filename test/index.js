@@ -72,6 +72,13 @@ test('should have different jsx ids', async t => {
   t.snapshot(code)
 })
 
+test('works with styled-jsx styles and babel-preset-env', async t => {
+  const { code } = await transform('./fixtures/styled-jsx-preset-env.js', {
+    presets: [['babel-preset-env', { modules: 'commonjs' }]]
+  })
+  t.snapshot(code)
+})
+
 test('works with non styled-jsx styles', async t => {
   const { code } = await transform('./fixtures/non-styled-jsx-style.js')
   t.snapshot(code)
